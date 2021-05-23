@@ -56,7 +56,7 @@ class Buy {
 			cout << "DP Charge:                 " << "\t\t\t NRs." << dp_charge << endl;
 			cout << "Total Fees and Commission: " << "\t\t\t NRs." << sebon + commission + dp_charge << endl;
 			cout << "Total Amount Payable:      " << "\t\t\t NRs." << net_amount + commission + sebon + dp_charge << endl;
-			cout << "Price Per Share:           " << "\t\t\t NRs." << (net_amount + commission + sebon + dp_charge) / share_quantity;  
+			cout << "Price Per Share:           " << "\t\t\t NRs." << (net_amount + commission + sebon + dp_charge) / share_quantity << endl;  
 		 } 
 
 		 
@@ -109,7 +109,7 @@ class Sell {
 		    recieved_amount = total_buy_amount;
 		    paid_amount= sell_amount;
 		    profit_loss = paid_amount - recieved_amount;
-		    recieve = net_amount - commission - dp_charge - sebon -capital_gain;
+		    recieve = net_amount - commission - dp_charge - sebon - capital_gain;
 			 display_data();
 			     
 		}
