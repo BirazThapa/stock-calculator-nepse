@@ -1,11 +1,12 @@
 #include<iostream>
 using namespace std;
 
-int share_price, share_quantity, net_amount, commission,sebon;
+int share_price, share_quantity, net_amount, dp_charge = 25;
+float commission, sebon;
 	
-	double brokercommissionrates()
+	float brokercommissionrates()
 		{
-			double commission_rate = 0;
+			float commission_rate = 0;
 			if (net_amount < 50000)
 				commission_rate = 0.004;
 			else if(net_amount > 50001 && net_amount < 500000)	
@@ -20,8 +21,8 @@ int share_price, share_quantity, net_amount, commission,sebon;
 			return commission_rate;	 			
 		 } 
 		 
-		 double sebon_fee() {
-		 	double sfee;
+		 float sebon_fee() {
+		 	float sfee;
 		 	sfee = 0.00015;
 		 	return sfee;
 		
@@ -49,12 +50,13 @@ class Buy {
 		
 		void display_data ()
 		{
-			cout << "Net Amount:                " << "\t\t\t" << net_amount << endl;
-			cout << "Broker Commission:         " << "\t\t\t" << commission << endl;
-			cout << "SEBON Fee:                 " << "\t\t\t" << sebon << endl;
-			cout << "Total Fees and Commission: " << "\t\t\t" << sebon + commission << endl;
-			cout << "Total Amount Payable:      " << "\t\t\t" << net_amount + commission + sebon << endl;
-			cout << "Price Per Share:           " << "\t\t\t" << (net_amount + commission + sebon) / share_quantity;  
+			cout << "Net Amount:                " << "\t\t\t NRs." << net_amount << endl;
+			cout << "Broker Commission:         " << "\t\t\t NRs." << commission << endl;
+			cout << "SEBON Fee:                 " << "\t\t\t NRs." << sebon << endl;
+			cout << "DP Charge:                 " << "\t\t\t NRs." << dp_charge << endl;
+			cout << "Total Fees and Commission: " << "\t\t\t NRs." << sebon + commission + dp_charge << endl;
+			cout << "Total Amount Payable:      " << "\t\t\t NRs." << net_amount + commission + sebon + dp_charge << endl;
+			cout << "Price Per Share:           " << "\t\t\t NRs." << (net_amount + commission + sebon + dp_charge) / share_quantity;  
 		 } 
 
 		 
