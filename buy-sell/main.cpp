@@ -103,13 +103,14 @@ class Sell {
 			commission = brokercommissionrates() * net_amount;
 			sebon_buy = sebon_fee() * total_buy;
 			sebon = sebon_fee () * net_amount;
-			total_buy_amount = total_buy + commission_purchase + sebon_buy + dp_charge ;
-		    sell_amount = net_amount - commission - sebon - dp_charge;
-		    capital_gain = 0.05 * (sell_amount - total_buy_amount);
-		    recieved_amount = total_buy_amount;
-		    paid_amount= sell_amount;
-		    profit_loss = paid_amount - recieved_amount;
-		    recieve = net_amount - commission - dp_charge - sebon - capital_gain;
+			
+		        total_buy_amount = total_buy + commission_purchase + sebon_buy + dp_charge ;
+		        sell_amount = net_amount - commission - sebon - dp_charge;
+		        capital_gain = 0.05 * (sell_amount - total_buy_amount);
+		    	recieved_amount = total_buy_amount;
+		    	paid_amount= sell_amount;
+		    	profit_loss = paid_amount - recieved_amount;
+		    	recieve = net_amount - commission - dp_charge - sebon - capital_gain;
 			 display_data();
 			     
 		}
