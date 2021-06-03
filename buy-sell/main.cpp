@@ -57,6 +57,7 @@ class Buy {
 			cout << "Total Fees and Commission: " << "\t\t\t NRs." << sebon + commission + dp_charge << endl;
 			cout << "Total Amount Payable:      " << "\t\t\t NRs." << net_amount + commission + sebon + dp_charge << endl;
 			cout << "Price Per Share:           " << "\t\t\t NRs." << (net_amount + commission + sebon + dp_charge) / share_quantity << endl;  
+		    system("PAUSE");
 		 } 
 
 		 
@@ -127,7 +128,7 @@ class Sell {
 		  }		 
 		    cout << "Amount To be Recieved:     " << "\t\t\t NRs." << recieve << endl;
 		    cout << "Profit / Loss:             " << "\t\t\t NRs." << profit_loss << endl;
-		    
+		    system ("pause");
 		  }
 		  
 };
@@ -139,20 +140,27 @@ class Sell {
 	
 	Buy  buying;
 	Sell selling;
-	
 	int choice;
+		while( 3 > 1)
+		{
+		    system("cls");
 	cout << "Welcome To Stock Calculator ( Buy / Sell )" << endl;
 	cout << "Choose an Option" << endl;
 	cout << "1.) Buy" << endl;
 	cout << "2.) Sell" << endl;
+	cout << "3.) Exit" << endl;
 	cout << "Enter Your Choice : ";
 	cin >> choice;
-	if (choice == 1)
-		buying.buy_shares();
-	else if(choice == 2)
-		 selling.sell_shares();
-	else
-		cout << "Invalid Input!";
-			
-	system("pause");
+	switch (choice)
+	{
+		case 1: buying.buy_shares();
+		break;
+		case 2: selling.sell_shares();
+		break;
+		case 3:
+			choice = 3;
+			exit(0);
+		break;
+	}
+		}
 }
