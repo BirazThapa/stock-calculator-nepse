@@ -1,5 +1,2 @@
-
-💻 Executable File Available Here - https://mega.nz/file/g5xQxSDY#VZrR7eJpjuQalHks942s1Driq-HelV1_9ms1t5E-pKM. <br>
-
-📈 Simple Buy / Sell Calculator for Investors and Traders 📈
+got bored coz of lockdown, so I made a simple stock caculator to help my dad.
 
