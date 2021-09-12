@@ -1,7 +1,8 @@
 #include<iostream>
 using namespace std;
 
-int share_price, share_quantity, net_amount, dp_charge = 25;
+int share_price, share_quantity, net_amount;
+const dp_charge = 25;
 float commission, sebon;
 	
 	float brokercommissionrates()
